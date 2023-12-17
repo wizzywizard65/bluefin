@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.3.0](https://github.com/wizzywizard65/bluefin/compare/v1.2.0...v1.3.0) (2023-12-17)
+
+
+### Features
+
+* Add Prompt integration ([#728](https://github.com/wizzywizard65/bluefin/issues/728)) ([56b761a](https://github.com/wizzywizard65/bluefin/commit/56b761acf996604dda257d628a9aec3e93e3208c))
+
 ## 1.2.0 (2023-12-15)
 
 
