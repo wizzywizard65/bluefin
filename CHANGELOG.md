@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.4.0](https://github.com/wizzywizard65/bluefin/compare/v1.3.0...v1.4.0) (2023-12-19)
+
+
+### Features
+
+* **dx:** Use DevPod from the ublue-os/staging copr ([#738](https://github.com/wizzywizard65/bluefin/issues/738)) ([4202205](https://github.com/wizzywizard65/bluefin/commit/4202205a665210f9b382dace440b3385a43977ca))
+
 ## [1.3.0](https://github.com/wizzywizard65/bluefin/compare/v1.2.0...v1.3.0) (2023-12-17)
 
 
