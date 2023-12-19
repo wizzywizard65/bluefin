@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.5.0](https://github.com/wizzywizard65/bluefin/compare/v1.4.0...v1.5.0) (2023-12-19)
+
+
+### Features
+
+* add distrobuilder to -dx ([#739](https://github.com/wizzywizard65/bluefin/issues/739)) ([894d397](https://github.com/wizzywizard65/bluefin/commit/894d397e8b79d56ed66ccbbeb76efac07dd27504))
+
 ## [1.4.0](https://github.com/wizzywizard65/bluefin/compare/v1.3.0...v1.4.0) (2023-12-19)
 
 
