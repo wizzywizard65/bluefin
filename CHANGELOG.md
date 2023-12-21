@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.6.0](https://github.com/wizzywizard65/bluefin/compare/v1.5.0...v1.6.0) (2023-12-21)
+
+
+### Features
+
+* **dx:** turn on docker socket by default ([#740](https://github.com/wizzywizard65/bluefin/issues/740)) ([ac2027c](https://github.com/wizzywizard65/bluefin/commit/ac2027cdd0e71c438c9bfd75fc7894a2083f4c2b))
+* **prompt:** match bazzite and g-t behavior ([#741](https://github.com/wizzywizard65/bluefin/issues/741)) ([cd96a51](https://github.com/wizzywizard65/bluefin/commit/cd96a51cc80ecf77154084ac3a68a4b7b41453b5))
+
 ## [1.5.0](https://github.com/wizzywizard65/bluefin/compare/v1.4.0...v1.5.0) (2023-12-19)
 
 
