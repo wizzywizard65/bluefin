@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.7.0](https://github.com/wizzywizard65/bluefin/compare/v1.6.0...v1.7.0) (2023-12-22)
+
+
+### Features
+
+* switch to tailscale-gnome-qs extension ([#744](https://github.com/wizzywizard65/bluefin/issues/744)) ([5b794d3](https://github.com/wizzywizard65/bluefin/commit/5b794d3a86cb36faaff5cfdc6523c209b7be9340))
+
+
+### Bug Fixes
+
+* Restore Control+Alt+T shortcut for terminals ([#747](https://github.com/wizzywizard65/bluefin/issues/747)) ([c8d0663](https://github.com/wizzywizard65/bluefin/commit/c8d0663f73b5496751a516880b43f533b8e014ad))
+* use tailscale-qs for F39 only ([#746](https://github.com/wizzywizard65/bluefin/issues/746)) ([d6f26e2](https://github.com/wizzywizard65/bluefin/commit/d6f26e22eb60e53d163e77417ee89c44fdcf58ae))
+
 ## [1.6.0](https://github.com/wizzywizard65/bluefin/compare/v1.5.0...v1.6.0) (2023-12-21)
 
 
