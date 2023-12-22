@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.1](https://github.com/wizzywizard65/bluefin/compare/v1.7.0...v1.7.1) (2023-12-22)
+
+
+### Bug Fixes
+
+* Always launch prompt in a new window when xdg-terminal-exec is called with no input ([#748](https://github.com/wizzywizard65/bluefin/issues/748)) ([0531ff9](https://github.com/wizzywizard65/bluefin/commit/0531ff926d8c48ffb86c220845a2ae9eda812e32))
+
 ## [1.7.0](https://github.com/wizzywizard65/bluefin/compare/v1.6.0...v1.7.0) (2023-12-22)
 
 
