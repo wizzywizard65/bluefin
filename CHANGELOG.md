@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.7.2](https://github.com/wizzywizard65/bluefin/compare/v1.7.1...v1.7.2) (2023-12-23)
+
+
+### Bug Fixes
+
+* Correct issue with command check in xdg-terminal-exec ([e48a816](https://github.com/wizzywizard65/bluefin/commit/e48a81688a5b0a0c812b0a5329e252e8a58c9fe2))
+
 ## [1.7.1](https://github.com/wizzywizard65/bluefin/compare/v1.7.0...v1.7.1) (2023-12-22)
 
 
