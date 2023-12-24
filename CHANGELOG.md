@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.8.0](https://github.com/wizzywizard65/bluefin/compare/v1.7.2...v1.8.0) (2023-12-24)
+
+
+### Features
+
+* **ci:** Verify base/Chainguard image(s) with cosign before building ([#754](https://github.com/wizzywizard65/bluefin/issues/754)) ([b0703f9](https://github.com/wizzywizard65/bluefin/commit/b0703f95cb52c825aa0504b9bf497a57010ced62))
+
 ## [1.7.2](https://github.com/wizzywizard65/bluefin/compare/v1.7.1...v1.7.2) (2023-12-23)
 
 
