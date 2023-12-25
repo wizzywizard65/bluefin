@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.9.0](https://github.com/wizzywizard65/bluefin/compare/v1.8.0...v1.9.0) (2023-12-25)
+
+
+### Features
+
+* add patched power-profiles-daemon ([#758](https://github.com/wizzywizard65/bluefin/issues/758)) ([cab8b83](https://github.com/wizzywizard65/bluefin/commit/cab8b833fb908aa2482fd0a209c74315ef690a87))
+* Enable num-lock by default ([#756](https://github.com/wizzywizard65/bluefin/issues/756)) ([6421500](https://github.com/wizzywizard65/bluefin/commit/64215008eb3f612b66306ad530d63b8adc736e93))
+* Fix caps-lock input delay ([#757](https://github.com/wizzywizard65/bluefin/issues/757)) ([dda52b0](https://github.com/wizzywizard65/bluefin/commit/dda52b0d769e11d9af33f8e3cfb8c72fbfad7bd1))
+
 ## [1.8.0](https://github.com/wizzywizard65/bluefin/compare/v1.7.2...v1.8.0) (2023-12-24)
 
 
