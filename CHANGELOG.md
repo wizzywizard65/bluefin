@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.9.1](https://github.com/wizzywizard65/bluefin/compare/v1.9.0...v1.9.1) (2023-12-26)
+
+
+### Reverts
+
+* capslock changes ([e914ac4](https://github.com/wizzywizard65/bluefin/commit/e914ac4c195bf0daa22ba59ed61ed4c31541f9b3))
+
 ## [1.9.0](https://github.com/wizzywizard65/bluefin/compare/v1.8.0...v1.9.0) (2023-12-25)
 
 
