@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.10.0](https://github.com/wizzywizard65/bluefin/compare/v1.9.1...v1.10.0) (2023-12-29)
+
+
+### Features
+
+* incus enable script ([#759](https://github.com/wizzywizard65/bluefin/issues/759)) ([c40eff7](https://github.com/wizzywizard65/bluefin/commit/c40eff7d51cecb641f44187a6e040ec3c77cb38c))
+
 ## [1.9.1](https://github.com/wizzywizard65/bluefin/compare/v1.9.0...v1.9.1) (2023-12-26)
 
 
