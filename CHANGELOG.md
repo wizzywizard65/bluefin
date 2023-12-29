@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.0](https://github.com/wizzywizard65/bluefin/compare/v1.10.0...v1.11.0) (2023-12-29)
+
+
+### Features
+
+* add brew package ([#760](https://github.com/wizzywizard65/bluefin/issues/760)) ([85b74ea](https://github.com/wizzywizard65/bluefin/commit/85b74ea9c1e5a4f017f5244ea25a1a37d3c49e13))
+
 ## [1.10.0](https://github.com/wizzywizard65/bluefin/compare/v1.9.1...v1.10.0) (2023-12-29)
 
 
