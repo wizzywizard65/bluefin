@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.11.1](https://github.com/wizzywizard65/bluefin/compare/v1.11.0...v1.11.1) (2023-12-30)
+
+
+### Bug Fixes
+
+* **dx:** use upstream wolfi as a base image ([#761](https://github.com/wizzywizard65/bluefin/issues/761)) ([73c3e50](https://github.com/wizzywizard65/bluefin/commit/73c3e50707d42b8ddd2b55fe96c5c543d1b51bb7))
+
 ## [1.11.0](https://github.com/wizzywizard65/bluefin/compare/v1.10.0...v1.11.0) (2023-12-29)
 
 
