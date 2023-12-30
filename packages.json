@@ -54,7 +54,6 @@
 				"cockpit-selinux",
 				"cockpit-storaged",
 				"cockpit-system",
-				"code",
 				"containerd.io",
 				"dbus-x11",
                                 "devpod",
