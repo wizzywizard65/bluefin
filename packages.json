@@ -57,7 +57,6 @@
 				"containerd.io",
 				"dbus-x11",
                                 "devpod",
-				"distrobuilder",
 				"docker-ce",
 				"docker-ce-cli",
 				"docker-buildx-plugin",
