@@ -1,5 +1,16 @@
 # Changelog
 
+## [1.12.0](https://github.com/wizzywizard65/bluefin/compare/v1.11.1...v1.12.0) (2023-12-31)
+
+
+### Features
+
+* add dive command ([#762](https://github.com/wizzywizard65/bluefin/issues/762)) ([f5c26de](https://github.com/wizzywizard65/bluefin/commit/f5c26ded53158e8a6f6bdc96a57ddd52210fa3c0))
+* add dive command ([#762](https://github.com/wizzywizard65/bluefin/issues/762)) ([98a4e80](https://github.com/wizzywizard65/bluefin/commit/98a4e80651adb599c4d87f670f23d53769b79fc6))
+* bluefin-cli enable sudo/chown linuxbrew ([#763](https://github.com/wizzywizard65/bluefin/issues/763)) ([17be957](https://github.com/wizzywizard65/bluefin/commit/17be95701aea71e4eba8e3ae15bb888813e4243f))
+* bluefin-cli enable sudo/chown linuxbrew ([#763](https://github.com/wizzywizard65/bluefin/issues/763)) ([c049d6c](https://github.com/wizzywizard65/bluefin/commit/c049d6cea0f568c055164e393d3473419499ae5d))
+* **dx:** add command-not-found ([#765](https://github.com/wizzywizard65/bluefin/issues/765)) ([f5409ca](https://github.com/wizzywizard65/bluefin/commit/f5409ca14c4607c12159eb9e0587b420dc172145))
+
 ## [1.11.1](https://github.com/wizzywizard65/bluefin/compare/v1.11.0...v1.11.1) (2023-12-30)
 
 
