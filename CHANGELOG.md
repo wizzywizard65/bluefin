@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.13.0](https://github.com/wizzywizard65/bluefin/compare/v1.12.0...v1.13.0) (2023-12-31)
+
+
+### Features
+
+* add playerctl ([#766](https://github.com/wizzywizard65/bluefin/issues/766)) ([e856ac0](https://github.com/wizzywizard65/bluefin/commit/e856ac09e5c5b985aa39bb8a1cc54e0cfcc042d8))
+
 ## [1.12.0](https://github.com/wizzywizard65/bluefin/compare/v1.11.1...v1.12.0) (2023-12-31)
 
 
