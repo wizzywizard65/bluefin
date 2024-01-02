@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.14.1](https://github.com/wizzywizard65/bluefin/compare/v1.14.0...v1.14.1) (2024-01-02)
+
+
+### Bug Fixes
+
+* **-dx:** Workaround swtpm SELinux issues ([#764](https://github.com/wizzywizard65/bluefin/issues/764)) ([1d9f64e](https://github.com/wizzywizard65/bluefin/commit/1d9f64e315cc3cfecb55de3bc8e783c8ac530f52))
+* **-dx:** Workaround swtpm SELinux issues ([#764](https://github.com/wizzywizard65/bluefin/issues/764)) ([f8dabd4](https://github.com/wizzywizard65/bluefin/commit/f8dabd479349bb5c4888913aa1acbad6f6cec177))
+* remove `systemctl enable docker` from `just docker` command ([#773](https://github.com/wizzywizard65/bluefin/issues/773)) ([3dfe992](https://github.com/wizzywizard65/bluefin/commit/3dfe9925353a347d2f9da1b6fb6a0738103a88ba))
+* remove `systemctl enable docker` from `just docker` command ([#773](https://github.com/wizzywizard65/bluefin/issues/773)) ([97ea484](https://github.com/wizzywizard65/bluefin/commit/97ea484c1a9f7b8482a5deef53c30104854c9a9d))
+* start docker.service on-demand instead of on-boot ([#772](https://github.com/wizzywizard65/bluefin/issues/772)) ([9187617](https://github.com/wizzywizard65/bluefin/commit/91876173a29cdee885495981f13d27b0c84791b8))
+* start docker.service on-demand instead of on-boot ([#772](https://github.com/wizzywizard65/bluefin/issues/772)) ([d965108](https://github.com/wizzywizard65/bluefin/commit/d965108d75f4da14f3fa87b219007f19bbb99d94))
+
 ## [1.14.0](https://github.com/wizzywizard65/bluefin/compare/v1.13.0...v1.14.0) (2024-01-01)
 
 
