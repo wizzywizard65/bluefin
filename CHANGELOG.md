@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.15.0](https://github.com/wizzywizard65/bluefin/compare/v1.14.1...v1.15.0) (2024-01-02)
+
+
+### Features
+
+* **bluefin-cli:** Add host-spawn and create symlinks ([#776](https://github.com/wizzywizard65/bluefin/issues/776)) ([dae9abe](https://github.com/wizzywizard65/bluefin/commit/dae9abe56bfff1ba40de9da121483cc078c0babd))
+* **dx:** Add wheel users to docker,incus-admin,lxd,libvirt groups ([#775](https://github.com/wizzywizard65/bluefin/issues/775)) ([3dd7809](https://github.com/wizzywizard65/bluefin/commit/3dd78096f6091ad4a9b87e518203bef15b9b0f6a))
+* **toolbox:** Verify wolfi-base before building ([#774](https://github.com/wizzywizard65/bluefin/issues/774)) ([e4ab9d3](https://github.com/wizzywizard65/bluefin/commit/e4ab9d3863661f38a2cbf77a6c2b02f5f95f4608))
+
 ## [1.14.1](https://github.com/wizzywizard65/bluefin/compare/v1.14.0...v1.14.1) (2024-01-02)
 
 
