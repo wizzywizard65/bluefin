@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.15.1](https://github.com/wizzywizard65/bluefin/compare/v1.15.0...v1.15.1) (2024-01-03)
+
+
+### Bug Fixes
+
+* **bluefin-cli:** Make sure /usr/bin/sh exists ([#778](https://github.com/wizzywizard65/bluefin/issues/778)) ([3d0b059](https://github.com/wizzywizard65/bluefin/commit/3d0b059e909316d0ac4dd42f0ae14cf3576bc1ef))
+
 ## [1.15.0](https://github.com/wizzywizard65/bluefin/compare/v1.14.1...v1.15.0) (2024-01-02)
 
 
