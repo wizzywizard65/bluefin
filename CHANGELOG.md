@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.16.0](https://github.com/wizzywizard65/bluefin/compare/v1.15.1...v1.16.0) (2024-01-03)
+
+
+### Features
+
+* **ci:** Verify remaining toolboxes ([#779](https://github.com/wizzywizard65/bluefin/issues/779)) ([0b437a9](https://github.com/wizzywizard65/bluefin/commit/0b437a90bea2d859630d8dce50af745c8921df66))
+
+
+### Bug Fixes
+
+* remove `--disable-content-trust` push flag ([#780](https://github.com/wizzywizard65/bluefin/issues/780)) ([aa2e785](https://github.com/wizzywizard65/bluefin/commit/aa2e785b5d080f004dabf2ba875a99cb7e9f53d8))
+
 ## [1.15.1](https://github.com/wizzywizard65/bluefin/compare/v1.15.0...v1.15.1) (2024-01-03)
 
 
