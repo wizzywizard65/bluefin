@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.18.0](https://github.com/wizzywizard65/bluefin/compare/v1.17.0...v1.18.0) (2024-01-05)
+
+
+### Features
+
+* **bluefin-cli:** Persist State of Cellar ([#785](https://github.com/wizzywizard65/bluefin/issues/785)) ([7f52f32](https://github.com/wizzywizard65/bluefin/commit/7f52f32509920f428787d645cf6f4ce9ac707963))
+
 ## [1.17.0](https://github.com/wizzywizard65/bluefin/compare/v1.16.0...v1.17.0) (2024-01-05)
 
 
