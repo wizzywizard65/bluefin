@@ -1,5 +1,22 @@
 # Changelog
 
+## [1.17.0](https://github.com/wizzywizard65/bluefin/compare/v1.16.0...v1.17.0) (2024-01-05)
+
+
+### Features
+
+* add firewall-config - gui for firewall ([#793](https://github.com/wizzywizard65/bluefin/issues/793)) ([084c9f7](https://github.com/wizzywizard65/bluefin/commit/084c9f7771cdfeb752ad60946e599ab00bce37c5))
+* add topgrade ([#782](https://github.com/wizzywizard65/bluefin/issues/782)) ([4ec776b](https://github.com/wizzywizard65/bluefin/commit/4ec776bd8b2f5b4823ac13d7abcaca6352b6972e))
+* add topgrade ([#782](https://github.com/wizzywizard65/bluefin/issues/782)) ([895aee9](https://github.com/wizzywizard65/bluefin/commit/895aee920c321eeb431b098b613130af438bfb86))
+
+
+### Bug Fixes
+
+* Hide menu icons without deleting .desktop files ([#786](https://github.com/wizzywizard65/bluefin/issues/786)) ([8174315](https://github.com/wizzywizard65/bluefin/commit/8174315418fc3136349fbb1d7c075bcc7a8d378e))
+* Hide menu icons without deleting .desktop files ([#786](https://github.com/wizzywizard65/bluefin/issues/786)) ([12f3f00](https://github.com/wizzywizard65/bluefin/commit/12f3f008a009ddea58bc64723869664665642136))
+* Update README.md to update the http links to https ([#787](https://github.com/wizzywizard65/bluefin/issues/787)) ([bb34b13](https://github.com/wizzywizard65/bluefin/commit/bb34b132c94e402b3eb72a5394238ee6e0bba582))
+* Update README.md to update the http links to https ([#787](https://github.com/wizzywizard65/bluefin/issues/787)) ([9a8c9b2](https://github.com/wizzywizard65/bluefin/commit/9a8c9b268dc805811e53cdc126e3e137d61ab411))
+
 ## [1.16.0](https://github.com/wizzywizard65/bluefin/compare/v1.15.1...v1.16.0) (2024-01-03)
 
 
