@@ -1,5 +1,14 @@
 # Changelog
 
+## [1.19.0](https://github.com/wizzywizard65/bluefin/compare/v1.18.0...v1.19.0) (2024-01-08)
+
+
+### Features
+
+* add gaming, gamingutilities, utilities folders in gnome ([#792](https://github.com/wizzywizard65/bluefin/issues/792)) ([aaa69ea](https://github.com/wizzywizard65/bluefin/commit/aaa69ea71413b4ec6fb76ac212f2cac8f92a3fb3))
+* Add Warehouse ([#798](https://github.com/wizzywizard65/bluefin/issues/798)) ([1b5056f](https://github.com/wizzywizard65/bluefin/commit/1b5056f83ca9804ad736e50500ba0bab4128148e))
+* Add Warehouse ([#798](https://github.com/wizzywizard65/bluefin/issues/798)) ([006cdf2](https://github.com/wizzywizard65/bluefin/commit/006cdf2b849dc62c11fcc0273bbc4c28f41bd64d))
+
 ## [1.18.0](https://github.com/wizzywizard65/bluefin/compare/v1.17.0...v1.18.0) (2024-01-05)
 
 
