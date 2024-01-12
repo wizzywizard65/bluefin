@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.20.0](https://github.com/wizzywizard65/bluefin/compare/v1.19.0...v1.20.0) (2024-01-12)
+
+
+### Features
+
+* add contributors action ([#802](https://github.com/wizzywizard65/bluefin/issues/802)) ([1768b71](https://github.com/wizzywizard65/bluefin/commit/1768b71e22b56de6d837da4b2311cb93dc730624))
+
+
+### Bug Fixes
+
+* provide build workflow with write permissions to the repo contents ([#805](https://github.com/wizzywizard65/bluefin/issues/805)) ([0d92fad](https://github.com/wizzywizard65/bluefin/commit/0d92fad67f8227925646b4e01e33541703c6cccd))
+
 ## [1.19.0](https://github.com/wizzywizard65/bluefin/compare/v1.18.0...v1.19.0) (2024-01-08)
 
 
