@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.21.0](https://github.com/wizzywizard65/bluefin/compare/v1.20.0...v1.21.0) (2024-01-14)
+
+
+### Features
+
+* move toolboxes to ublue-os/toolboxes ([#814](https://github.com/wizzywizard65/bluefin/issues/814)) ([0e2d892](https://github.com/wizzywizard65/bluefin/commit/0e2d8928d931eeb56f0cfa028e811c6858a44d8f))
+
+
+### Bug Fixes
+
+* Make Wolfi build again ([#812](https://github.com/wizzywizard65/bluefin/issues/812)) ([40f91a6](https://github.com/wizzywizard65/bluefin/commit/40f91a6805d9f6bc6b7918302702e6d96f23ce45))
+
 ## [1.20.0](https://github.com/wizzywizard65/bluefin/compare/v1.19.0...v1.20.0) (2024-01-12)
 
 
