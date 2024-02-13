@@ -98,7 +98,6 @@
 				"qemu-user-binfmt",
 				"qemu-user-static",
 				"qemu",
-				"timeshift",
 				"ubuntu-family-fonts",
 				"virt-manager",
 				"virt-viewer"
