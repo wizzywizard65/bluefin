@@ -5,33 +5,14 @@ benchmark:
     echo 'Running a 1 minute benchmark ...'
     stress-ng --matrix 0 -t 1m --times
 
-# Assemble distrobox containers
-assemble:
-    echo 'Assembling and replacing distroboxes ...'
-    distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
-
-# Install aqua | https://aquaproj.github.io
-aqua:
-    #!/usr/bin/env bash
-    printf '\n=>Installing aqua ...\n\n'
-    pushd "$(mktemp -d)"
-    curl -sSfL -O https://raw.githubusercontent.com/aquaproj/aqua-installer/v2.1.1/aqua-installer
-    echo "c2af02bdd15da6794f9c98db40332c804224930212f553a805425441f8331665  aqua-installer" | sha256sum -c
-    chmod +x aqua-installer
-    ./aqua-installer
-    printf '\n=> Make sure the ${AQUA_ROOT_DIR}/bin environment variable is added to your PATH (.bashrc/.zshrc):\n'
-    printf '\n    export PATH="${AQUA_ROOT_DIR:-${XDG_DATA_HOME:-$HOME/.local/share}/aquaproj-aqua}/bin:$PATH"\n'
-    printf '\n=> see https://aquaproj.github.io/docs/tutorial for more info\n'
-
-[private]
+# Configure Bluefin-CLI Terminal Experience
 bluefin-cli:
-    #!/usr/bin/env bash 
-    if [ ! -d "${XDG_DATA_HOME:-$HOME/.local/share}/bluefin-cli/Cellar" ]; then 
-       mkdir -p "${XDG_DATA_HOME:-$HOME/.local/share}/bluefin-cli/Cellar" 
-    fi; 
-    distrobox-create --nvidia --image ghcr.io/ublue-os/bluefin-cli:latest -n bluefin --volume "${XDG_DATA_HOME:-$HOME/.local/share}/bluefin-cli/Cellar":/home/linuxbrew/.linuxbrew/Cellar:z
-    echo "Entering bluefin-cli" 
-    distrobox enter -n bluefin
+    @/usr/libexec/enable-bluefin-cli.sh
+
+# Configure Terminal Experience
+[private]
+configure-terminal:
+    @/usr/libexec/configure-terminal.sh
 
 # Enable Cockpit for web-based system management | https://cockpit-project.org/
 cockpit:
@@ -90,21 +71,6 @@ devmode:
         fi
     fi
 
-# Assemble a Pytorch distrobox (Nvidia only)
-distrobox-mlbox:
-    echo 'Assembling pytorch-nvidia mlbox distrobox ...'
-    distrobox assemble create --file /usr/share/ublue-os/distrobox/pytorch-nvidia.ini
-
-# Create a Wolfi OS container | https://github.com/wolfi-dev
-distrobox-wolfi:
-    echo 'Creating WolfiOS distrobox ...'
-    distrobox create --image ghcr.io/ublue-os/wolfi-toolbox:latest -n wolfi
-
-# Create a universal developer container
-distrobox-universal:
-    echo 'Creating Universal Development distrobox ...'
-    distrobox create --image mcr.microsoft.com/devcontainers/universal:latest -n universal -Y
-
 # Switch to the fish shell
 fish:
     sudo usermod $USER --shell /usr/bin/fish 
@@ -113,7 +79,6 @@ fish:
 # Install recommended GNOME extensions
 gnome-extensions:
     pip install --upgrade gnome-extensions-cli
-    gext install tailscale-status@maxgallup.github.com
     gext install nightthemeswitcher@romainvigier.fr
     gext install pano@elhan.io
     gext install weatheroclock@CleoMenezesJr.github.io
@@ -219,47 +184,22 @@ nix-devbox-global:
     echo 'run "devbox global run install-hook-zsh" to configure zsh shell'
     echo 'run "devbox global run" to see other available configuration commands'
 
-# Enable podmansh as user shell (EXPERIMENTAL)
-podmansh:
-    sudo mkdir -p /etc/containers/systemd/users/${UID}
-    sudo cp /usr/share/ublue-os/quadlets/podmansh.container /etc/containers/systemd/users/${UID}/podmansh.container
-    sudo usermod $USER --shell /usr/bin/podmansh
-    printf "${USER}'s shell is now %s." "$(cat /etc/passwd | grep ":$UID:" | cut '-d:' '-f7')"
-    systemctl --user start podman.socket
-    loginctl enable-linger $(whoami)
-
-    podman pull ghcr.io/ublue-os/ubuntu-toolbox:latest
-
-    systemctl --user daemon-reload
-    systemctl --user stop podmansh.service
-    systemctl --user start podmansh.service
-
-    @echo "Shell now switched to podmansh. Spawn a new terminal to get going!"
-    @echo "By default, the shell will be Bash. To override it, create ~/.profile with your preferred shell"
-    @echo "Note: That shell must exist in the toolbox!"
-    @echo "To ensure a smooth experience within VSCode, please add the following to your settings.json:"
-    @echo "---"
-    @echo "\"terminal.integrated.profiles.linux\": {"
-    @echo "  \"podmansh zsh\": {"
-    @echo "     \"path\": \"podmansh\","
-    @echo "     \"args\": [\"-c\", \"cd \${workspaceFolder}; exec zsh\"]"
-    @echo "  }"
-    @echo "}"
-    @echo "---"
-    @echo "Please make sure you have the following environment variable set WITHIN the container:"
-    @echo "---"
-    @echo "export DOCKER_HOST=unix:///var/run/podman/podman.sock"
-    @echo "---"
-    @echo "Happy Podmansh'ing!"
-
-# Switch podmansh to another image (EXPERIMENTAL)
-podmansh-switch IMAGE:
-    sudo sed -i "/Image\=.*$/c Image\={{ IMAGE }}" /etc/containers/systemd/users/${UID}/podmansh.container
-    podman pull {{ IMAGE }}
-    podman rm -f podmansh
-    systemctl --user daemon-reload
-    systemctl --user start podmansh.service
-    echo "Image now switched to {{ IMAGE }}"
+# Ptyxis terminal transparency
+ptyxis-transparency opacity="0.95":
+    #!/usr/bin/env bash
+    set -euxo pipefail
+    if [[ -n "$(echo "{{ opacity }}" | grep -v '^[.0-9]*$')" ]]; then
+      printf "Value must be numeric: %s.\n" "{{ opacity }}"
+    elif [[ $(echo "0<{{ opacity }} && 1>{{ opacity }}" | bc -q) -eq 1 ]]; then
+      raw="$(gsettings get org.gnome.Ptyxis profile-uuids)"
+      uuids="$(sed -En 's|[^0-9a-z]*||g; s|([0-9a-z]{32})|\1\n|gp' <<<${raw})"
+      for i in ${uuids}; do
+        location="org.gnome.Ptyxis.Profile:/org/gnome/Ptyxis/Profiles/${i}/"
+        gsettings set "${location}" opacity "{{ opacity }}"; done
+      printf "Ptyxis opacity is now %s.\n" "{{ opacity }}"
+    else
+      printf "Value must be between 0 and 1: %s.\n" "{{ opacity }}"
+    fi
 
 # Run pytorch
 pytorch:
@@ -282,15 +222,6 @@ touch:
     gext install improvedosk@nick-shmyrev.dev
     gext install gestureImprovements@gestures
 
-# A preview of what the update system would look like in the future
-update-ng:
-    echo 'Upgrading system...'
-    sudo bootc upgrade
-    echo 'Upgrading flatpaks...'
-    flatpak update -y
-    echo 'Assembling and replacing distroboxes ...'
-    distrobox assemble create --replace --file /etc/distrobox/distrobox.ini
-
 # Upgrade Distrobox to the latest git version
 distrobox-git:
     echo 'Installing latest git snapshot of Distrobox'
@@ -312,3 +243,18 @@ dx-group:
     sudo usermod -aG lxd $USER
     sudo usermod -aG libvirt $USER
     @echo "Logout to use docker, incus-admin, lxd, libvirt"
+
+# Add atuin
+atuin:
+    #!/usr/bin/bash 
+    shell=$(basename $SHELL) 
+    if test $shell = "fish"; then 
+        echo "Adding atuin to your config.fish"
+        printf '\nif status is-interactive\n\tif type -q atuin\n\t\tatuin init fish | source\n\tend\nend\n' >> ${XDG_CONFIG_HOME:-$HOME/.config}/fish/config.fish
+    elif test $shell = "zsh"; then 
+        echo "Adding atuin to your .zshrc"
+        printf '\n[[ "$(command -v atuin)" ]] && eval "$(atuin init zsh)"\n' >> ${ZDOTDIR:-$HOME}/.zshrc 
+    elif test $shell = "bash"; then 
+        echo "Adding bash-prexec and atuin to your .bashrc" 
+        printf '\n[[ -f /usr/share/bash-prexec ]] && source /usr/share/bash-prexec\n[[ "$(command -v atuin)" ]] && eval "$(atuin init bash)"\n' >> ~/.bashrc
+    fi

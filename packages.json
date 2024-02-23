@@ -25,9 +25,12 @@
 				"make",
 				"mesa-libGLU",
 				"nautilus-gsconnect",
+				"nerd-fonts",
 				"playerctl",
 				"pulseaudio-utils",
 				"python3-pip",
+				"rclone",
+				"restic",
 				"samba-dcerpc",
 				"samba-ldb-ldap-modules",
 				"samba-winbind-clients",
@@ -37,7 +40,6 @@
 				"stress-ng",
 				"tailscale",
 				"tmux",
-				"ublue-update",
 				"usbmuxd",
 				"wireguard-tools",
 				"xprop",
@@ -47,7 +49,7 @@
 			],
 			"bluefin-dx": [
 				"adobe-source-code-pro-fonts",
-				"cascadiacode-nerd-fonts",
+				"cascadia-code-fonts",
 				"cockpit-machines",
 				"cockpit-networkmanager",
 				"cockpit-ostree",
@@ -59,7 +61,7 @@
 				"code",
 				"containerd.io",
 				"dbus-x11",
-                                "devpod",
+                "devpod",
 				"distrobuilder",
 				"docker-ce",
 				"docker-ce-cli",
@@ -80,6 +82,7 @@
 				"lxd-agent",
 				"lxd",
 				"mozilla-fira-mono-fonts",
+				"neofetch",
 				"p7zip-plugins",
 				"p7zip",
 				"podman-compose",
@@ -97,8 +100,7 @@
 				"qemu-user-binfmt",
 				"qemu-user-static",
 				"qemu",
-				"ubuntu-nerd-fonts",
-				"ubuntumono-nerd-fonts",
+				"ubuntu-family-fonts",
 				"virt-manager",
 				"virt-viewer"
 			]
@@ -135,7 +137,11 @@
 			"bluefin": [
 				"gnome-shell-extension-tailscale-gnome-qs",
 				"input-leap",
-                                "nautilus-open-any-terminal"
+				"nautilus-open-any-terminal",
+				"tuned",
+				"tuned-ppd",
+				"tuned-utils",
+				"tuned-profiles-atomic"
 			],
 			"bluefin-dx": [],
 			"bluefin-framework": []
