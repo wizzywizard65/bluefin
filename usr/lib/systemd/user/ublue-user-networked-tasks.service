@@ -1,15 +1,15 @@
 [Unit]
-Description=Manage system flatpaks
+Description=Manage user activities that require network access (Flatpaks, Brew)
 Documentation=https://github.com/ublue-os/endlish-oesque/issues/10
 Wants=network-online.target
-After=network-online.target ublue-system-setup.service
+After=network-online.target
 
 [Service]
 Type=oneshot
-ExecStart=/usr/bin/ublue-system-flatpak-manager
+ExecStart=/usr/libexec/ublue-user-networked-tasks
 Restart=on-failure
 RestartSec=30
 StartLimitInterval=0
 
 [Install]
-WantedBy=multi-user.target
+WantedBy=default.target

@@ -81,6 +81,8 @@ COPY --from=ghcr.io/ublue-os/bluefin-cli /usr/bin/atuin /usr/bin/atuin
 COPY --from=ghcr.io/ublue-os/bluefin-cli /usr/share/bash-prexec /usr/share/bash-prexec
 
 RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-"${FEDORA_MAJOR_VERSION}"/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo -O /etc/yum.repos.d/ublue-os-staging-fedora-"${FEDORA_MAJOR_VERSION}".repo && \
+    wget https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh -O /usr/libexec/brew-install && \
+    chmod +x /usr/libexec/brew-install && \
     /tmp/build.sh && \
     /tmp/image-info.sh && \
     /tmp/fetch-quadlets.sh && \
@@ -98,8 +100,9 @@ RUN wget https://copr.fedorainfracloud.org/coprs/ublue-os/staging/repo/fedora-"$
     systemctl enable dconf-update.service && \
     systemctl enable ublue-update.timer && \
     systemctl enable ublue-system-setup.service && \
-    systemctl enable ublue-system-flatpak-manager.service && \
-    systemctl --global enable ublue-user-flatpak-manager.service && \
+    systemctl enable ublue-system-networked-tasks.service && \
+    systemctl enable brew-install-workaround.service && \
+    systemctl --global enable ublue-user-networked-tasks.service && \
     systemctl --global enable ublue-user-setup.service && \
     fc-cache -f /usr/share/fonts/ubuntu && \
     fc-cache -f /usr/share/fonts/inter && \
