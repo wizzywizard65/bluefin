@@ -268,3 +268,13 @@ install-system-flatpaks:
     fi
     FLATPAK_LIST="$(curl https://raw.githubusercontent.com/ublue-os/bluefin/main/${FLATPAKS} | tr '\n' ' ')"
     flatpak --system -y install ${FLATPAK_LIST}
+
+# Configure grub bootmenu visibility
+configure-grub:
+    /usr/libexec/configure-grub.sh
+
+update-ng:
+    echo "Note: This command doesn't work if you have locally layered packages" 
+    sudo bootc upgrade
+    flatpak update -y
+    brew upgrade
