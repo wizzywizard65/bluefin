@@ -1,5 +1,13 @@
 # Changelog
 
+## [2.1.0](https://github.com/wizzywizard65/bluefin/compare/v2.0.0...v2.1.0) (2024-05-16)
+
+
+### Features
+
+* **brew:** Add example to motd ([#1303](https://github.com/wizzywizard65/bluefin/issues/1303)) ([cfde5c2](https://github.com/wizzywizard65/bluefin/commit/cfde5c2521ab79082800234431f7dd2a7c366596))
+* homebrew on image ([#1293](https://github.com/wizzywizard65/bluefin/issues/1293)) ([6bc98f0](https://github.com/wizzywizard65/bluefin/commit/6bc98f00b2a6cad9182ba5e5e4d2159cc6c46e7d))
+
 ## [2.0.0](https://github.com/wizzywizard65/bluefin/compare/v1.2.0...v2.0.0) (2024-05-14)
 
 
