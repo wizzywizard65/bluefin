@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.0.1](https://github.com/wizzywizard65/bluefin/compare/v3.0.0...v3.0.1) (2024-05-19)
+
+
+### Bug Fixes
+
+* **aurora:** kf.svg log spam and splash gear size ([#1325](https://github.com/wizzywizard65/bluefin/issues/1325)) ([065b90b](https://github.com/wizzywizard65/bluefin/commit/065b90bdd7fb9ef8210593fb0f94ea2bf8a7b4ff))
+
 ## [3.0.0](https://github.com/wizzywizard65/bluefin/compare/v2.7.0...v3.0.0) (2024-05-17)
 
 
