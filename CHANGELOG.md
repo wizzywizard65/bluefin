@@ -1,5 +1,19 @@
 # Changelog
 
+## [3.1.0](https://github.com/wizzywizard65/bluefin/compare/v3.0.1...v3.1.0) (2024-05-22)
+
+
+### Features
+
+* Add Containers folder from bazzite ([#1339](https://github.com/wizzywizard65/bluefin/issues/1339)) ([3e094c5](https://github.com/wizzywizard65/bluefin/commit/3e094c53e354114c556c8fce3a9c1bd4bb88c2ee))
+* add lm_sensors ([#1329](https://github.com/wizzywizard65/bluefin/issues/1329)) ([6ff9de4](https://github.com/wizzywizard65/bluefin/commit/6ff9de437f83701d876cfab3e7d09a843f95b40c))
+
+
+### Bug Fixes
+
+* **just:** remove fleekbrew alias ([#1309](https://github.com/wizzywizard65/bluefin/issues/1309)) ([f9aee2d](https://github.com/wizzywizard65/bluefin/commit/f9aee2db923f17e43bc1bcf00d51e7a00b40907c))
+* **motd:** shorten motd descriptions ([#1330](https://github.com/wizzywizard65/bluefin/issues/1330)) ([bfdfd7a](https://github.com/wizzywizard65/bluefin/commit/bfdfd7ae1422ee06cedf2581d43c68eee015bd73))
+
 ## [3.0.1](https://github.com/wizzywizard65/bluefin/compare/v3.0.0...v3.0.1) (2024-05-19)
 
 
