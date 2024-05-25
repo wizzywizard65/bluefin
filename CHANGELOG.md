@@ -1,5 +1,12 @@
 # Changelog
 
+## [3.1.1](https://github.com/wizzywizard65/bluefin/compare/v3.1.0...v3.1.1) (2024-05-25)
+
+
+### Bug Fixes
+
+* update initial description ([#1346](https://github.com/wizzywizard65/bluefin/issues/1346)) ([4e4ff0b](https://github.com/wizzywizard65/bluefin/commit/4e4ff0b59a6a0c548aa35e4e8dcab096043f8a02))
+
 ## [3.1.0](https://github.com/wizzywizard65/bluefin/compare/v3.0.1...v3.1.0) (2024-05-22)
 
 
