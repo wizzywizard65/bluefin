@@ -1,5 +1,17 @@
 # Changelog
 
+## [3.2.0](https://github.com/wizzywizard65/bluefin/compare/v3.1.1...v3.2.0) (2024-05-27)
+
+
+### Features
+
+* add android-tools to dx images ([#1349](https://github.com/wizzywizard65/bluefin/issues/1349)) ([e2dfd17](https://github.com/wizzywizard65/bluefin/commit/e2dfd174590555958ebe1b959483e7586cb5f0be))
+
+
+### Bug Fixes
+
+* remove vestigial extensions command ([#1348](https://github.com/wizzywizard65/bluefin/issues/1348)) ([f699d82](https://github.com/wizzywizard65/bluefin/commit/f699d82c880eb5719b0bcdc1db9117fb8b42e695))
+
 ## [3.1.1](https://github.com/wizzywizard65/bluefin/compare/v3.1.0...v3.1.1) (2024-05-25)
 
 
