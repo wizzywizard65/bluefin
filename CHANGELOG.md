@@ -1,5 +1,18 @@
 # Changelog
 
+## [3.3.0](https://github.com/wizzywizard65/bluefin/compare/v3.2.0...v3.3.0) (2024-05-28)
+
+
+### Features
+
+* **motd:** add install date ([#1351](https://github.com/wizzywizard65/bluefin/issues/1351)) ([a5b41bd](https://github.com/wizzywizard65/bluefin/commit/a5b41bd7f8b6c365595b7668cfc2b589dec93261))
+
+
+### Bug Fixes
+
+* **motd:** be less boring than bazzite ([#1352](https://github.com/wizzywizard65/bluefin/issues/1352)) ([e80303f](https://github.com/wizzywizard65/bluefin/commit/e80303fce087b47571ee3c0d740f47127ab09e57))
+* remove extra whitespace in fastfetch ([062b602](https://github.com/wizzywizard65/bluefin/commit/062b60241ed0c067c0ef01799a31eb6c42735770))
+
 ## [3.2.0](https://github.com/wizzywizard65/bluefin/compare/v3.1.1...v3.2.0) (2024-05-27)
 
 
