@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.1.0](https://github.com/wizzywizard65/bluefin/compare/v4.0.0...v4.1.0) (2024-06-05)
+
+
+### Features
+
+* add skanpage and simple-scan ([#1368](https://github.com/wizzywizard65/bluefin/issues/1368)) ([77ffb28](https://github.com/wizzywizard65/bluefin/commit/77ffb2870e51d35a29cdd042f8b669c1cc94f1d2))
+
 ## [4.0.0](https://github.com/wizzywizard65/bluefin/compare/v3.0.0...v4.0.0) (2024-06-04)
 
 
