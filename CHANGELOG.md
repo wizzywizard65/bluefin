@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.2.0](https://github.com/wizzywizard65/bluefin/compare/v4.1.0...v4.2.0) (2024-06-06)
+
+
+### Features
+
+* **motd:** add link to feedback survey ([#1370](https://github.com/wizzywizard65/bluefin/issues/1370)) ([daaca5c](https://github.com/wizzywizard65/bluefin/commit/daaca5c7fcba258500f33f537953088c37cd863c))
+
 ## [4.1.0](https://github.com/wizzywizard65/bluefin/compare/v4.0.0...v4.1.0) (2024-06-05)
 
 
