@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.3.0](https://github.com/wizzywizard65/bluefin/compare/v4.2.0...v4.3.0) (2024-06-07)
+
+
+### Features
+
+* install flatpak-builder in dx ([#1372](https://github.com/wizzywizard65/bluefin/issues/1372)) ([eafc971](https://github.com/wizzywizard65/bluefin/commit/eafc9711c2217da6f26772801d0462aabe7f6cc3))
+
 ## [4.2.0](https://github.com/wizzywizard65/bluefin/compare/v4.1.0...v4.2.0) (2024-06-06)
 
 
