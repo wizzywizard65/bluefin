@@ -1,5 +1,12 @@
 # Changelog
 
+## [4.4.0](https://github.com/wizzywizard65/bluefin/compare/v4.3.0...v4.4.0) (2024-06-07)
+
+
+### Features
+
+* switch to Clapper from Celluloid ([#1374](https://github.com/wizzywizard65/bluefin/issues/1374)) ([bd63bf2](https://github.com/wizzywizard65/bluefin/commit/bd63bf2467ba98f2ad051ecf1b8842e6de3b0b27))
+
 ## [4.3.0](https://github.com/wizzywizard65/bluefin/compare/v4.2.0...v4.3.0) (2024-06-07)
 
 
