@@ -1,5 +1,18 @@
 # Changelog
 
+## [5.1.0](https://github.com/wizzywizard65/bluefin/compare/v5.0.0...v5.1.0) (2024-06-17)
+
+
+### Features
+
+* add foo2zjs ([#1393](https://github.com/wizzywizard65/bluefin/issues/1393)) ([c21f224](https://github.com/wizzywizard65/bluefin/commit/c21f224805cdbf06f3ecc2341599ac9f5493ab19))
+* switch to GNOME Papers ([#1399](https://github.com/wizzywizard65/bluefin/issues/1399)) ([53bacc9](https://github.com/wizzywizard65/bluefin/commit/53bacc9d66857e838baf772c271ee22f608da81d))
+
+
+### Bug Fixes
+
+* port clash between InvokeAI and Cockpit ([#1394](https://github.com/wizzywizard65/bluefin/issues/1394)) ([c817600](https://github.com/wizzywizard65/bluefin/commit/c81760040f9efdea66ebd1977809a99491de39aa))
+
 ## [5.0.0](https://github.com/wizzywizard65/bluefin/compare/v4.0.0...v5.0.0) (2024-06-12)
 
 
