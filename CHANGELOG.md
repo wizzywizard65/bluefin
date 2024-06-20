@@ -1,5 +1,12 @@
 # Changelog
 
+## [5.2.0](https://github.com/wizzywizard65/bluefin/compare/v5.1.0...v5.2.0) (2024-06-19)
+
+
+### Features
+
+* Add kernel signer to sign Fedora kernel with ublue's keys for secure boot ([#1404](https://github.com/wizzywizard65/bluefin/issues/1404)) ([d709382](https://github.com/wizzywizard65/bluefin/commit/d709382cf1cae75c68eb08c7b061d25758a3c9ca))
+
 ## [5.1.0](https://github.com/wizzywizard65/bluefin/compare/v5.0.0...v5.1.0) (2024-06-17)
 
 
