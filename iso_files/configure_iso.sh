@@ -2,12 +2,25 @@
 
 set -x
 
-dnf install --nogpgcheck --repofrompath 'um,https://repos.fyralabs.com/um$releasever' readymade
+dnf --enablerepo="terra" install -y readymade
 
+# TODO: Figure out exactly what needs to happen in this file
 tee /etc/readymade.toml <<EOF
+[install]
+allowed_installtypes = ["wholedisk"]
 
+[distro]
+name = "Bluefin"
+
+[[postinstall]]
+module = "CleanupBoot"
+
+[[postinstall]]
+module = "InitialSetup"
+
+[[postinstall]]
+module = "Language"
 EOF
-
 
 systemctl disable brew-setup.service
 systemctl --global disable podman-auto-update.timer
