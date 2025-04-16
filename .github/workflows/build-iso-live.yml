@@ -33,8 +33,8 @@ jobs:
       fail-fast: false
       matrix:
         platform: [amd64]
-        flavor: [""]
-        image_version: ["41"]
+        flavor: ["", "nvidia-open"]
+        image_version: ["stable", "beta"]
     permissions:
       contents: read
       packages: read

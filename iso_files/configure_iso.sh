@@ -4,11 +4,20 @@ set -x
 
 dnf --enablerepo="terra" install -y readymade
 
+IMAGE_INFO="$(cat /usr/share/ublue-os/image-info.json)"
+IMAGE_TAG="$(jq -c -r '."image-tag"' <<< $IMAGE_INFO)"
+IMAGE_FLAVOR="$(jq -c -r '."image-flavor"' <<< $IMAGE_INFO)"
+
+OUTPUT_NAME="ghcr.io/ublue-os/bluefin"
+if [ "$IMAGE_FLAVOR" != "main" ] ; then
+  OUTPUT_NAME="${OUTPUT_NAME}-${FLAVOR}"
+fi
+
 tee /etc/readymade.toml <<EOF
 [install]
 allowed_installtypes = ["wholedisk"]
 copy_mode = "bootc"
-bootc_imgref = "containers-storage:ghcr.io/ublue-os/bluefin:41"
+bootc_imgref = "containers-storage:$OUTPUT_NAME:$IMAGE_TAG"
 
 [distro]
 name = "Bluefin"
