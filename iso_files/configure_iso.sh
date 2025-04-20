@@ -12,12 +12,18 @@ OUTPUT_NAME="ghcr.io/ublue-os/bluefin"
 if [ "$IMAGE_FLAVOR" != "main" ] ; then
   OUTPUT_NAME="${OUTPUT_NAME}-${IMAGE_FLAVOR}"
 fi
+KARGS=""
+if [ "$IMAGE_FLAVOR" =~ nvidia ] ; then
+  KARGS='bootc_kargs = ["rd.driver.blacklist=nouveau", "modprobe.blacklist=nouveau", "nvidia-drm.modeset=1"]'
+fi 
 
 tee /etc/readymade.toml <<EOF
 [install]
 allowed_installtypes = ["wholedisk", "custom"]
 copy_mode = "bootc"
 bootc_imgref = "containers-storage:$OUTPUT_NAME:$IMAGE_TAG"
+bootc_enforce_sigpolicy = true
+$KARGS
 
 [distro]
 name = "Bluefin"
@@ -26,6 +32,7 @@ name = "Bluefin"
 module = "Script"
 EOF
 
+cp -f /usr/share/applications/com.fyralabs.Readymade.desktop /etc/xdg/autostart
 mkdir -p /usr/share/readymade/postinstall.d
 tee /usr/share/readymade/postinstall.d/10-flatpaks.sh <<EOF
 #!/usr/bin/bash
@@ -35,10 +42,23 @@ rsync -aWHA /run/host/var/lib/flatpak /ostree/deploy/default/var/lib
 EOF
 chmod +x /usr/share/readymade/postinstall.d/10-flatpaks.sh
 
+# Gets rid of the anaconda branding and still disabled the welcome dialog
+tee /usr/share/glib-2.0/schemas/org.gnome.shell.gschema.override <<EOF
+[org.gnome.shell]
+welcome-dialog-last-shown-version='4294967295'
+EOF
+glib-compile-schemas /usr/share/glib-2.0/schemas
+
+systemctl disable rpm-ostree-countme.service
+systemctl disable tailscaled.service
+systemctl disable brew-upgrade.timer
+systemctl disable brew-update.timer
 systemctl disable brew-setup.service
-systemctl --global disable podman-auto-update.timer
 systemctl disable rpm-ostree.service
 systemctl disable uupd.timer
 systemctl disable ublue-system-setup.service
-systemctl --global disable ublue-user-setup.service
+systemctl disable ublue-guest-user.service
 systemctl disable check-sb-key.service
+systemctl --global disable ublue-flatpak-manager.service
+systemctl --global disable podman-auto-update.timer
+systemctl --global disable ublue-user-setup.service
