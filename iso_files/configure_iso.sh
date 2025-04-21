@@ -2,7 +2,7 @@
 
 set -x
 
-dnf --enablerepo="terra" install -y readymade
+dnf --enablerepo="terra" install -y readymade-nightly
 
 IMAGE_INFO="$(cat /usr/share/ublue-os/image-info.json)"
 IMAGE_TAG="$(jq -c -r '."image-tag"' <<< $IMAGE_INFO)"
@@ -19,7 +19,7 @@ fi
 
 tee /etc/readymade.toml <<EOF
 [install]
-allowed_installtypes = ["wholedisk", "custom"]
+allowed_installtypes = ["wholedisk"]
 copy_mode = "bootc"
 bootc_imgref = "containers-storage:$OUTPUT_NAME:$IMAGE_TAG"
 bootc_enforce_sigpolicy = true
