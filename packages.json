@@ -111,6 +111,7 @@
 				"edk2-ovmf",
 				"flatpak-builder",
 				"genisoimage",
+				"ghostty",
 				"google-droid-sans-mono-fonts",
 				"google-go-mono-fonts",
 				"ibm-plex-mono-fonts",
