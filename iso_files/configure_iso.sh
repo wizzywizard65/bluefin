@@ -5,6 +5,13 @@ set -x
 dnf install -y gparted
 dnf --enablerepo="terra" install -y readymade-nightly
 
+# FIXME: move to `dnf install` once (https://github.com/terrapkg/packages/pull/4623) is merged
+pushd $(mktemp -d)
+dnf copr enable -y ublue-os/packages
+dnf download bluefin-readymade-config
+rpm -i --force *.rpm
+popd
+
 IMAGE_INFO="$(cat /usr/share/ublue-os/image-info.json)"
 IMAGE_TAG="$(jq -c -r '."image-tag"' <<< $IMAGE_INFO)"
 IMAGE_FLAVOR="$(jq -c -r '."image-flavor"' <<< $IMAGE_INFO)"
@@ -28,20 +35,20 @@ bootc_args = ["--skip-fetch-check"]
 $KARGS
 
 [[bento]]
-title = "Welcome to Bluefin!"
-desc = "Get to know your new operating system"
+title = "page-welcome"
+desc = "page-installation-welcome-desc"
 link = "https://projectbluefin.io"
 icon = "explore-symbolic"
 
 [[bento]]
-title = "Need help?"
-desc = "Ask questions on our forums!"
+title = "page-installation-help"
+desc = "page-installation-help-desc"
 link = "https://universal-blue.discourse.group/"
 icon = "chat-symbolic"
 
 [[bento]]
-title = "Read the Documentation"
-desc = "Set yourself up for success by reading the docs"
+title = "page-installation-contrib"
+desc = "page-installation-contrib-desc"
 link = "https://docs.projectbluefin.io"
 icon = "applications-development-symbolic"
 
