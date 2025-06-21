@@ -31,4 +31,7 @@ dnf5 -y copr enable hikariknight/looking-glass-kvmfr
 # Podman-bootc
 dnf5 -y copr enable gmaglione/podman-bootc
 
+# Ghostty
+dnf5 -y copr enable pgdev/ghostty
+
 echo "::endgroup::"
