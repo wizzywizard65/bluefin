@@ -81,6 +81,7 @@
 				"ublue-polkit-rules",
 				"ublue-setup-services",
 				"uld",
+				"usbip",
 				"usbmuxd",
 				"wireguard-tools",
 				"wl-clipboard",
@@ -197,9 +198,9 @@
 	"42": {
 		"include": {
 			"all": [
-        "bazaar",
-        "google-noto-fonts-all",
-        "uupd"
+        			"bazaar",
+        			"google-noto-fonts-all",
+        			"uupd"
       ],
 			"dx": []
 		},
