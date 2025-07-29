@@ -156,6 +156,7 @@ sections:
       - org.gnome.Mahjongg
       - io.github.fragglet.sdl_sopwith
       - org.gnome.Sudoku
+      - org.wesnoth.Wesnoth
   - title: "Utilities"
     subtitle: "Gear up and kit out"
     rows: 4
@@ -213,6 +214,7 @@ sections:
       - io.github.nokse22.asciidraw
       - dev.geopjr.Collision
       - io.github.tobagin.digger
+      - app.drey.Elastic
   - title: "Sustainability & Education"
     subtitle: "Invest in the Future"
     rows: 2
