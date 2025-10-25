@@ -32,10 +32,6 @@ env:
   IMAGE_REGISTRY: "ghcr.io/${{ github.repository_owner }}"
   IMAGE_NAME: "bluefin"
 
-concurrency:
-  group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
-  cancel-in-progress: true
-
 jobs:
   # Define which variants to build based on input
   determine-matrix:
@@ -100,7 +96,7 @@ jobs:
               {"platform":"amd64","flavor":"nvidia-open","image_version":"stable"}
             ]}'
           fi
-          
+
           # Compact the JSON and output it
           compact_matrix=$(echo "$matrix" | jq -c .)
           echo "matrix=$compact_matrix" >> $GITHUB_OUTPUT
@@ -193,13 +189,13 @@ jobs:
           set -x
           mkdir -p output
           OUTPUT_DIRECTORY="$(realpath output)"
-          sha256sum "${OUTPUT_PATH}" | tee "${OUTPUT_DIRECTORY}/${OUTPUT_NAME}.iso-CHECKSUM"
           mv "${OUTPUT_PATH}" "${OUTPUT_DIRECTORY}/${OUTPUT_NAME}.iso"
+          (cd "${OUTPUT_DIRECTORY}" && sha256sum "${OUTPUT_NAME}.iso" | tee "${OUTPUT_NAME}.iso-CHECKSUM")
           echo "output_directory=$OUTPUT_DIRECTORY" >> "${GITHUB_OUTPUT}"
 
       - name: Upload to Job Artifacts
         if: github.ref_name == 'testing' || (github.event_name == 'workflow_dispatch' && github.event.inputs.upload_artifacts)
-        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4
+        uses: actions/upload-artifact@330a01c490aca151604b8cf639adc76d48f6c5d4 # v5
         with:
           name: ${{ steps.image_ref.outputs.artifact_format }}
           if-no-files-found: error

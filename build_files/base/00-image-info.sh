@@ -2,7 +2,7 @@
 
 echo "::group:: ===$(basename "$0")==="
 
-set -ouex pipefail
+set -xeuo pipefail
 
 IMAGE_PRETTY_NAME="Bluefin"
 IMAGE_LIKE="fedora"
@@ -18,9 +18,6 @@ IMAGE_REF="ostree-image-signed:docker://ghcr.io/$IMAGE_VENDOR/$IMAGE_NAME"
 
 # Image Flavor
 image_flavor="main"
-if [[ "${IMAGE_NAME}" =~ nvidia ]]; then
-  image_flavor="nvidia"
-fi
 if [[ "${IMAGE_NAME}" =~ nvidia-open ]]; then
   image_flavor="nvidia-open"
 fi
